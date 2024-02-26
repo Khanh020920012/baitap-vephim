@@ -9,10 +9,10 @@ class Item extends Component {
     // Dùng các giá trị từ dữ liệu để render thông tin ghế
     return (
       <div>
-        <div></div>
         <div>
           <div>
-            <div className="seat-container ">
+            <div>{row}</div>
+            <div className="seat-container">
               {seat.map((item) => (
                 <button
                   onClick={() => {

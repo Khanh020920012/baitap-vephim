@@ -7,7 +7,7 @@ class Cart extends Component {
     console.log(this.props.gia);
     return (
       <div>
-        <table className="table">
+        <table style={{ color: "white" }} className="table">
           <thead>
             <tr>
               <th>Số Ghế</th>
@@ -55,4 +55,4 @@ let mapDispatchToProps = (dispatch) => {
     },
   };
 };
-export default connect(mapStateToProps,mapDispatchToProps)(Cart);
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);

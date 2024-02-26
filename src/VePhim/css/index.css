@@ -1,3 +1,9 @@
+.seat-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+
 .ghe {
   border: 3px solid orange;
   width: 45px;
