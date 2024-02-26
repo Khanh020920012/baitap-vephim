@@ -1,9 +1,14 @@
 .seat-container {
   display: flex;
   flex-wrap: nowrap;
-  gap: 5px;
+  gap: 1px;
 }
-
+.seat{
+  background-color: rgba(126, 114, 114, 0.5); /* Sử dụng màu với độ trong suốt thấp hơn */
+  padding: 10px;
+  align-items: center;
+  opacity: 0.9; /* Điều chỉnh độ mờ của ghế */
+}
 .ghe {
   border: 3px solid orange;
   width: 45px;
@@ -68,10 +73,54 @@ input[type="checkbox"] {
   display: none;
 }
 
-/* Hiển thị icon khi checkbox được chọn */
+
 input[type="checkbox"]:checked + .checkbox-custom::after {
   display: block;
 }
 .seat-label:active {
-  background-color: green; /* Màu nền khi button được click */
+  background-color: green; 
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+}
+
+.table-header {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  min-width: 150px; /* Điều chỉnh kích thước tối thiểu của các cột */
+}
+
+.table-header th {
+  padding: 10px;
+}
+
+.table-header th:first-child {
+  border-top-left-radius: 5px;
+}
+
+.table-header th:last-child {
+  border-top-right-radius: 5px;
+}
+
+.tbody tr:nth-child(even) {
+  background-color: #555;
+}
+
+.tbody tr:nth-child(odd) {
+  background-color: #444;
+}
+
+.tbody td {
+  padding: 10px;
+}
+
+.tbody td:last-child {
+  text-align: center;
+} 
+.List{
+  font-size: 40px;
+  font-weight: 700;
 }

@@ -4,23 +4,24 @@ import { connect } from "react-redux";
 class Cart extends Component {
   render() {
     let { onDelete, soGhe, gia, seat } = this.props;
-    console.log(this.props.gia);
+
     return (
-      <div>
+      <div className="col-12">
+        <div className="List">Danh Sách Ghế Bạn Chọn</div>
         <table style={{ color: "white" }} className="table">
-          <thead>
+          <thead className="thead">
             <tr>
-              <th>Số Ghế</th>
-              <th>Giá</th>
-              <th>Hủy</th>
+              <th className="table-header">Số Ghế</th>
+              <th className="table-header">Giá</th>
+              <th className="table-header">Hủy</th>
             </tr>
           </thead>
           <tbody>
             {this.props.cart.map((item, index) => {
               return (
                 <tr key={item}>
-                  <td>{index + 1}</td>
-                  <td>{item.row}</td>
+                  <td>{item.soGhe}</td>
+                  <td>{item.gia}</td>
                   <td>
                     <button
                       onClick={() => onDelete(item)}

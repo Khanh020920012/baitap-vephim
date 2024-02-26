@@ -9,28 +9,26 @@ class Item extends Component {
     // Dùng các giá trị từ dữ liệu để render thông tin ghế
     return (
       <div>
-        <div>
-          <div>
-            <div>{row}</div>
-            <div className="seat-container">
-              {seat.map((item) => (
-                <button
-                  onClick={() => {
-                    this.props.handleClickAddMovie(this.props.data);
-                  }}
-                  key={item}
-                  className={item.daDat ? "ghe daDat" : "seat-label"}
+        <div className=" seat">
+          <div>{row}</div>
+          <div className="seat-container">
+            {seat.map((item) => (
+              <button
+                onClick={() => {
+                  this.props.handleClickAddMovie(item);
+                }}
+                key={item}
+                className={item.daDat ? "ghe daDat" : "seat-label"}
+                disabled={item.daDat}
+              >
+                <input
+                  type="checkbox"
+                  value={item.soGhe}
                   disabled={item.daDat}
-                >
-                  <input
-                    type="checkbox"
-                    value={item.soGhe}
-                    disabled={item.daDat}
-                  />
-                  <span className="span-item">{item.soGhe}</span>
-                </button>
-              ))}
-            </div>
+                />
+                <span className="span-item">{item.soGhe}</span>
+              </button>
+            ))}
           </div>
         </div>
       </div>

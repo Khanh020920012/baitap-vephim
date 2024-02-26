@@ -13,6 +13,7 @@ function App() {
         height: "150%",
         color: "white",
         filter: "grayscale(0.2)",
+        fontSize: "20px",
       }}
       className="App"
     >
