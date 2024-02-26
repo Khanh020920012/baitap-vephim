@@ -1,0 +1,71 @@
+.ghe {
+  border: 3px solid orange;
+  width: 45px;
+  height: 35px;
+  font-size: 12px;
+  margin-left: 2%;
+  margin-bottom: 1%;
+  border-radius: 5px;
+}
+
+.daDat {
+  border: 3px solid orange;
+  background: orange;
+  color: #000;
+  cursor: no-drop !important;
+  border-radius: 5px;
+  width: 45px;
+  height: 35px;
+}
+
+.seat-label {
+  border: 3px solid orange;
+  width: 45px;
+  height: 35px;
+  font-size: 12px;
+  margin-left: 2%;
+  margin-bottom: 1%;
+  border-radius: 5px;
+}
+
+/* Để các lớp CSS khác nhau tương ứng với các trạng thái của ghế */
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Tạo kiểu cho khu vực checkbox */
+.checkbox-custom {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  position: relative;
+  vertical-align: middle;
+}
+
+/* Thiết kế icon khi checkbox được chọn */
+.checkbox-custom::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  border: solid #008000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  top: 3px;
+  left: 6px;
+  display: none;
+}
+
+/* Hiển thị icon khi checkbox được chọn */
+input[type="checkbox"]:checked + .checkbox-custom::after {
+  display: block;
+}
+.seat-label:active {
+  background-color: green; /* Màu nền khi button được click */
+}
