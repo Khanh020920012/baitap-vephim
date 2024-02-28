@@ -1,3 +1,5 @@
+import { ADD_MOVIE, DELETE_SEAT } from "./constant";
+
 let initialState = {
   seatArr: [
     {
@@ -175,7 +177,7 @@ let initialState = {
 };
 export let seatReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "ADD_MOVIE": {
+    case ADD_MOVIE: {
       let cloneCard = [...state.cart];
       if (
         cloneCard.findIndex((item) => item.soGhe === action.payload.soGhe) == -1
@@ -184,7 +186,7 @@ export let seatReducer = (state = initialState, action) => {
       }
       return { ...state, cart: cloneCard };
     }
-    case "DELETE_SEAT": {
+    case DELETE_SEAT: {
       let updatedCart = state.cart.filter((item) => item !== action.payload);
       return { ...state, cart: updatedCart };
     }

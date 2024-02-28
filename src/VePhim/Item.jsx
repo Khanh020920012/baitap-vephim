@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { ADD_MOVIE } from "./redux/constant";
 
 class Item extends Component {
   render() {
@@ -40,7 +41,7 @@ let mapDispatchToProps = (dispatch) => {
   return {
     handleClickAddMovie: (item) => {
       let action = {
-        type: "ADD_MOVIE",
+        type: ADD_MOVIE,
         payload: item,
       };
       dispatch(action);

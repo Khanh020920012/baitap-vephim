@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { DELETE_SEAT } from "./redux/constant";
 
 class Cart extends Component {
   render() {
@@ -49,7 +50,7 @@ let mapDispatchToProps = (dispatch) => {
   return {
     onDelete: (item) => {
       let action = {
-        type: "DELETE_SEAT",
+        type: DELETE_SEAT,
         payload: item,
       };
       dispatch(action);
