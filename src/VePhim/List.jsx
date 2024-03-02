@@ -15,7 +15,7 @@ class List extends Component {
     });
   };
   render() {
-    return <div className="row col-8">{this.renderListMovie()}</div>;
+    return <div  className="row col-8">{this.renderListMovie()}</div>;
   }
 }
 

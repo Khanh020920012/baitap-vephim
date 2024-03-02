@@ -3,6 +3,9 @@ import { connect } from "react-redux";
 import { ADD_MOVIE } from "./redux/constant";
 
 class Item extends Component {
+  handleSelectSeat = (seat) => {
+    this.props.handleClickAddMovie(seat); // Gọi action creator để thêm ghế vào giỏ hàng
+  };
   render() {
     // Destructure props để lấy dữ liệu từ props.data
     let { handleClickAddMovie, row, seat } = this.props.data;
@@ -10,16 +13,16 @@ class Item extends Component {
     // Dùng các giá trị từ dữ liệu để render thông tin ghế
     return (
       <div>
-        <div className=" seat">
+        <div className="   seat text-left ml-3 mt-4 ">
           <div>{row}</div>
           <div className="seat-container">
             {seat.map((item) => (
               <button
                 onClick={() => {
-                  this.props.handleClickAddMovie(item);
+                  this.handleSelectSeat(item);
                 }}
-                key={item}
-                className={item.daDat ? "ghe daDat" : "seat-label"}
+                key={seat.soGhe}
+                className={item.daDat ? "gheDuocChon" : "ghe"}
                 disabled={item.daDat}
               >
                 <input

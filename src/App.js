@@ -10,12 +10,13 @@ function App() {
         backgroundImage: `url(https://wallpapercave.com/wp/EcNfOSK.jpg)`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        height: "150%",
+        height: "100%",
+        width: "100%",
         color: "white",
         filter: "grayscale(0.2)",
         fontSize: "20px",
       }}
-      className="App"
+      className="App  display-4 text-warning"
     >
       Đặt vé xem phim {/* <BookMovie /> */}
       <VePhim />

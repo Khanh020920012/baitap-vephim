@@ -8,6 +8,7 @@ export default class VePhim extends Component {
       <div>
         <div className="row">
           <div className="col-8">
+            <div className="screen"></div>
             <List />
           </div>
           <div className="col-4">

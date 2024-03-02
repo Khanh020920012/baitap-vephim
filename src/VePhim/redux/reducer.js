@@ -179,6 +179,7 @@ export let seatReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_MOVIE: {
       let cloneCard = [...state.cart];
+
       if (
         cloneCard.findIndex((item) => item.soGhe === action.payload.soGhe) == -1
       ) {
